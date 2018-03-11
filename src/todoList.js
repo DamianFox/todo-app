@@ -10,12 +10,11 @@ class TodoList extends Component {
     };
    
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   addItem(e) {
     var task = e.target.task.value;
-
-    // console.log("task", task);
 
     if (task !== "") {
       var newItem = {
@@ -28,13 +27,21 @@ class TodoList extends Component {
           items: prevState.items.concat(newItem) 
         };
       });
-      
+
       e.target.task.value = "";
     }
        
-    // console.log(this.state.items);
-       
     e.preventDefault();
+  }
+
+  deleteItem(key) {
+    var filteredItems = this.state.items.filter(function (item) {
+      return (item.key !== key);
+    });
+   
+    this.setState({
+      items: filteredItems
+    });
   }
 
   render() {
@@ -44,10 +51,10 @@ class TodoList extends Component {
           <form onSubmit={this.addItem}>
             <input id="task" name="task" placeholder="Enter task" autoComplete="off" >
             </input>
-            <button type="submit">add</button>
+            <button type="submit">Add</button>
           </form>
         </div>
-        <TodoItems entries={this.state.items}/>
+        <TodoItems entries={this.state.items} delete={this.deleteItem} />
       </div>
     );
   }

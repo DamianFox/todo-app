@@ -1,0 +1,62 @@
+/*
+ * Globals
+ */
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  padding: 10em;
+  background-color: #f7f7f7;
+}
+
+input {
+  padding: .625em;
+  font-size: 1em;
+  border: 1px solid #e4e4e4;
+  width: 28.125em;
+}
+
+button {
+  padding: .625em;
+  font-size: 1em;
+  margin-left: 1em;
+  background-color: #005be5;
+  color: #FFF;
+  border: 1px solid #005be5;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #002d89
+  border: 1px solid #002d89;
+}
+
+ul {
+  width: 28.125em;
+  list-style: none;
+  margin-left: 0;
+}
+
+li {
+  width: 100%;
+  color: #333;
+  background-color: #fff;
+  padding: 0.9375em;
+  margin-bottom: 0.8375em;
+  border-radius: 1px;
+  list-style: none;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}

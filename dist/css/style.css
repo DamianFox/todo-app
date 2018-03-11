@@ -41,16 +41,17 @@ button:hover {
 }
 
 ul {
-  width: 28.125em;
+  width: 32.314375em;
   list-style: none;
-  margin-left: 0;
+  margin-left: -2.5em;
 }
 
 li {
-  width: 100%;
+  width: 32.314375em;
   color: #333;
   background-color: #fff;
   padding: 0.9375em;
+  margin-top: 0.8375em;
   margin-bottom: 0.8375em;
   border-radius: 1px;
   list-style: none;

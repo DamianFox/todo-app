@@ -4,10 +4,10 @@
   "description": "A simple todo app",
   "main": "index.js",
   "scripts": {
-    "start":  "node index.js",
-    "watch" : "webpack -d --watch",
-    "build" : "webpack",
-    "serve" : "serve ./dist"
+    "start": "node index.js",
+    "watch": "webpack -d --watch",
+    "build": "webpack",
+    "serve": "serve ./dist"
   },
   "keywords": [
     "react",
@@ -24,8 +24,9 @@
     "serve": "^6.4.4"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "express": "^4.14.0"
+    "react-flip-move": "^3.0.1"
   }
 }

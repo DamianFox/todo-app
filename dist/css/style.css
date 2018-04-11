@@ -18,9 +18,14 @@ body {
   background-color: #f7f7f7;
 }
 
+h1 {
+  margin: 0 0 40px 0;
+}
+
 input {
   padding: .625em;
   font-size: 1em;
+  border-radius: 2px;
   border: 1px solid #e4e4e4;
   width: 28.125em;
 }
@@ -31,6 +36,7 @@ button {
   margin-left: 1em;
   background-color: #005be5;
   color: #FFF;
+  border-radius: 2px;
   border: 1px solid #005be5;
   cursor: pointer;
 }

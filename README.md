@@ -1,5 +1,7 @@
 ## Todo App
 
+Simple todo app, where the user can add a task through the input, and delete a task by clicking on a specific one.
+
 ###### How to start the project:
 
 - ```npm run start``` - The server is started on port 3000
@@ -14,3 +16,5 @@
 - CSS
 - Javascript (React)
 - Webpack
+
+![Todo Appp](https://raw.githubusercontent.com/DamianFox/todo-app/master/todo-app.png)

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TodoItems from "./todoItems";
- 
+
 class TodoList extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,20 @@ class TodoList extends Component {
     this.deleteItem = this.deleteItem.bind(this);
   }
 
+  componentDidMount() {
+    const cachedTodos = localStorage.getItem('todos');
+
+    if (cachedTodos !== null) {
+      this.setState({ items: JSON.parse(cachedTodos) });
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('todos', JSON.stringify(this.state.items));
+  }
+
   addItem(e) {
+    e.preventDefault();
     var task = e.target.task.value;
 
     if (task !== "") {
@@ -21,17 +34,15 @@ class TodoList extends Component {
         text: task,
         key: Date.now()
       };
-   
+
       this.setState((prevState) => {
         return { 
-          items: prevState.items.concat(newItem) 
+          items: prevState.items.concat(newItem)
         };
       });
 
       e.target.task.value = "";
     }
-       
-    e.preventDefault();
   }
 
   deleteItem(key) {

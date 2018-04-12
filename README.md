@@ -17,4 +17,4 @@ Simple todo app, where the user can add a task through the input, and delete a t
 - Javascript (React)
 - Webpack
 
-![Todo Appp](https://raw.githubusercontent.com/DamianFox/todo-app/master/todo-app.png)
+![Todo App](https://raw.githubusercontent.com/DamianFox/todo-app/master/todo-app.png)
